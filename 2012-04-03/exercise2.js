@@ -41,3 +41,22 @@ DRAW (floor)
 
 
 
+//muri
+
+
+
+
+
+var wallPool1 = SIMPLEX_GRID ([[-0.8,7.2],[-0.8,0.2],[-1,3]]);
+
+var wallPool2 = SIMPLEX_GRID ([[-0.8,0.2],[-1,25],[4]]);
+
+var wallPool3 = SIMPLEX_GRID ([[-1,8],[-25.85,0.2],[4]]);
+
+ var wallPool4 = SIMPLEX_GRID ([[-9,0.2],[-23,3],[4]]);;
+
+
+
+var wallPool = STRUCT ([wallPool1,wallPool2,wallPool3,wallPool4]);
+
+DRAW(wallPool)
