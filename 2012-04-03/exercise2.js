@@ -44,6 +44,14 @@ DRAW (floor)
 //muri
 
 
+var wall1 = SIMPLEX_GRID ([[-9,38],[-23,0.2],[-1,3]]);
+
+DRAW (wall1)
+
+
+
+
+//muri piscina
 
 
 
@@ -60,3 +68,4 @@ var wallPool3 = SIMPLEX_GRID ([[-1,8],[-25.85,0.2],[4]]);
 var wallPool = STRUCT ([wallPool1,wallPool2,wallPool3,wallPool4]);
 
 DRAW(wallPool)
+
