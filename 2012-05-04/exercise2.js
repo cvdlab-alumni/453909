@@ -1,31 +1,32 @@
 //model of the fuselage of RAF SE5a
 
 var domain1 = INTERVALS(1)(30);
+var domain2 = DOMAIN([[0,1],[0,1]])([15,30]);
+var domain3 = DOMAIN([[0,1], [0,1], [0,1]]) ([15,15,15]);
 
-var a = ([INTERVALS(1)(20)]);
-var b = ([INTERVALS(1)(30)]);
+var controls1 = [[0,-2,-2],[10,-1,-1]]; 
+var c1 = BEZIER(S0)(controls1);
+var curve1 = MAP(c1)(domain1);
+DRAW(curve1);
 
+var controls2 = [[0,2,-2],[10,1,-1]];
+var c2 = BEZIER(S0)(controls2);
+var curve2 = MAP(c2)(domain1);
+DRAW(curve2);
 
-var c0 = BEZIER(S0)([[1,0,0],[0.4,10,1]]);   
-var c1 = BEZIER(S0)([[-1,0,0],[-0.2,10,0.5]]);
-var c2 = BEZIER(S0)([[1,0,2],[0.2,10,2]]);
-var c3 = BEZIER(S0)([[-1,0,2],[-0.2,10,2]]);
-var c4 = BEZIER(S0)([[-1.5,0,1],[-0.2,10,1]]);
-var c5 = BEZIER(S0)([[1.5,0,1],[0.2,10,1]]);
-var c6 = BEZIER(S0)([[0.5,0,-0.5],[0,10,0.5]]);
-var c7 = BEZIER(S0)([[-0.5,0,-0.5],[0,10,0.5]]);
+var controls21 =[[0,-2,-2],[10,-1,-1]];
+var controls22 =[[0,-2,2],[10,-1,1]];
+var c21 = BEZIER(S0)(controls21);
+var c22 = BEZIER(S0)(controls22);
+var surf1 = BEZIER(S1)([c21,c22]);
+var ls = MAP(s12a)(domain2);
 
-var controls0 = [c0,c1,c2,c3,c4,c5,c6,c7];
+DRAW (lS)
 
-var c8 = BEZIER(S0)([[-1,0,2],[-0.8,4,2]]);
-var c9 = BEZIER(S0)([[-0.5,0,2.5],[-0.2,4,2.5]]);
-var c10 = BEZIER(S0)([[0.5,0,2.5],[0.2,4,2.5]]);
-var c11 = BEZIER(S0)([[1,0,2],[0.8,4,2]]);
-var c12 = BEZIER(S0)([[-0.6,5,2],[-0.2,10,2]]);
-var c13 = BEZIER(S0)([[-0.15,5,2.5],[-0.2,10,2]]);
-var c14 = BEZIER(S0)([[0.15,5,2.5],[0.2,10,2]]);
-var c15 = BEZIER(S0)([[0.6,5,2],[0.2,10,2]]);
-
-
-
-
+var controls11 =[[0,2,2],[10,1,1]];
+var controls12 =[[0,2,-2],[10,1,-1]];
+var c11 = BEZIER(S0)(controls11);
+var c12 = BEZIER(S0)(controls12);
+var surf2 = BEZIER(S1)([c11,c12]);
+var uS= MAP(surf2)(domain2);
+DRAW(uS);
