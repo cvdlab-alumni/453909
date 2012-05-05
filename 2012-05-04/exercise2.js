@@ -24,7 +24,7 @@ var c22 = BEZIER(S0)(controls22);
 var surf1 = BEZIER(S1)([c21,c22]);
 var lS = MAP(surf1)(domain2);
 
-DRAW (lS)
+DRAW(COLOR([0,0,0.2])(lS));
 
 
 //parte alta
@@ -35,7 +35,7 @@ var c11 = BEZIER(S0)(controls11);
 var c12 = BEZIER(S0)(controls12);
 var surf2 = BEZIER(S1)([c11,c12]);
 var uS= MAP(surf2)(domain2);
-DRAW(uS);
+DRAW(COLOR([0,0,0.2])(uS));
 
 
 // lati
@@ -44,4 +44,5 @@ var surf3 = CUBIC_HERMITE(S1)([c1,c2,[0,0,-3],[0,0,3]]);
 var sides = MAP(surf3)(domain2); 
 
 var l= STRUCT([sides, R([1,2])([PI])(sides) ]);
-DRAW(l);
+DRAW(COLOR([0,0,0.2])(l));
+
