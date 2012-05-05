@@ -25,7 +25,7 @@ var controls = [c0,c1,c2,c3,c4,c5];
 
 var surf = BEZIER(S1)(controls);
 var hS1 = T([0,1])([0.3,-0.3])(MAP(surf)(domain2));
-var hS2 = S([2])([-1])(sO1);
+var hS2 = S([2])([-1])(hS1);
 var stabs = STRUCT([hS1,hS2]);
 
 DRAW(COLOR([0,0,0.2])(stabs));
