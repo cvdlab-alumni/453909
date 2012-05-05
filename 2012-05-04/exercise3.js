@@ -1,3 +1,7 @@
+// produce the model of horizontal and vertical stabilizers
+
+
+
 
 var domain1 = INTERVALS(1)(30);
 var domain2 = DOMAIN([[0,1],[0,1]])([15,60]);
