@@ -52,9 +52,9 @@ var pillars3 = STRUCT([pilRow3a,pilRow3b])
 
 //DRAW(pillars3)
 
-pillars = STRUCT([pillars0,pillars1,pillars2,pillars3])
+building = STRUCT([pillars0,pillars1,pillars2,pillars3])
 
-DRAW(pillars)
+DRAW(building)
 
 
 
